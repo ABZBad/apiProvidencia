@@ -2,24 +2,40 @@
 header('Content-Type: application/json; charset=utf-8');
 
 // 1. Configuración de la base de datos
-define('DB_HOST', 'localhost');
-define('DB_USER', 'unifor34_usrcatalogo');
-define('DB_PASS', 'H0tC0c0@2025Pr0vid3nci@');
-define('DB_NAME', 'unifor34_catalogo');
-define('ALLOWED_ORIGIN', 'https://porve.com');
 
-// 2. Configuración JWT
-define('JWT_SECRET', 'tu_clave_secreta_super_segura_123!');
-define('JWT_ALGORITHM', 'HS256');
+include 'config.php'; // o require 'config.php';
+
+
 
 // 3. Headers CORS
 header("Access-Control-Allow-Origin: " . ALLOWED_ORIGIN);
 header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type, Authorization");
 
+
+function logAction($message, $level='INFO', $context=[]){
+    $logEntry= sprintf(
+        "[%s] %s: %s %s\n",
+        date('Y-m-d H:i:s'),
+        $level,
+        $message,
+        !empty($context) ? json_encode($context) :''
+    );
+
+    file_put_contents(LOG_FILE, $logEntry, FILE_APPEND);
+    if(php_sapi_name() === 'cli' || isset($_GET['debug'])){
+        error_log($logEntry);
+    }
+
+}
+
 // 4. Conexión a MySQL con manejo de errores
 function getDBConnection() {
     try {
+
+        logAction("intentando conexion a mysql","DEBUG",
+            ['host'=> DB_HOST, 'user' => DB_USER]
+        );
         $conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
         
         if ($conn->connect_error) {
@@ -129,6 +145,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action']) && $_GET['ac
 
 // B. Endpoint de login
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action']) && $_GET['action'] === 'login') {
+    logAction("incio de solicitud de login", "INFO");
     try {
         $input = json_decode(file_get_contents('php://input'), true);
         
@@ -138,29 +155,32 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action']) && $_GET['ac
         
         $conn = getDBConnection();
         $passwordHash = crearPasswordSHA256($input['password']);
-        
+        logAction("preparando consulta", "DEBUG");
         $stmt = $conn->prepare("SELECT id, nombre, rol FROM usuarios WHERE username = ? AND password = ?");
         $stmt->bind_param("ss", $input['username'], $passwordHash);
         $stmt->execute();
-        $result = $stmt->get_result();
-        
-        if ($result->num_rows !== 1) {
+
+        $stmt->store_result(); // Necesario para usar num_rows
+        logAction("preparando consulta", '$store_result');
+            
+        if ($stmt->num_rows !== 1) {
             throw new Exception('Credenciales inválidas');
         }
         
-        $user = $result->fetch_assoc();
+        $stmt -> bind_result( $id, $nombre,$rol );
+        $stmt->fetch();
         $token = generateJWT([
-            'sub' => $user['id'],
-            'name' => $user['nombre'],
-            'role' => $user['rol']
+            'sub' => $id,
+            'name' => $nombre,
+            'role' => $rol
         ]);
         
         sendResponse(true, [
             'token' => $token,
             'user' => [
-                'id' => $user['id'],
-                'name' => $user['nombre'],
-                'role' => $user['rol']
+                'sub' => $id,
+                'name' => $nombre,
+                'role' => $rol
             ]
         ], 'Autenticación exitosa');
         
