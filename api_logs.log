@@ -1,0 +1,57 @@
+[2025-04-26 05:21:07] INFO: incio de solicitud de login 
+[2025-04-26 05:21:07] DEBUG: intentando conexion a mysql {"host":"localhost","user":"root"}
+[2025-04-26 05:21:07] DEBUG: preparando consulta 
+[2025-04-26 05:22:03] INFO: incio de solicitud de login 
+[2025-04-26 05:22:03] DEBUG: intentando conexion a mysql {"host":"localhost","user":"unifor34_usrcatalogo"}
+[2025-04-26 05:27:33] INFO: incio de solicitud de login 
+[2025-04-26 05:27:33] DEBUG: intentando conexion a mysql {"host":"localhost","user":"unifor34_usrcatalogo"}
+[2025-04-26 05:29:27] INFO: incio de solicitud de login 
+[2025-04-26 05:29:27] DEBUG: intentando conexion a mysql {"host":"localhost","user":"unifor34_usrcatalogo"}
+[2025-04-26 05:29:49] INFO: incio de solicitud de login 
+[2025-04-26 05:29:49] DEBUG: intentando conexion a mysql {"host":"localhost","user":"unifor34_usrcatalogo"}
+[2025-04-26 05:29:58] INFO: incio de solicitud de login 
+[2025-04-26 05:29:58] DEBUG: intentando conexion a mysql {"host":"localhost","user":"unifor34_usrcatalogo"}
+[2025-04-26 05:31:59] INFO: incio de solicitud de login 
+[2025-04-26 05:31:59] DEBUG: intentando conexion a mysql {"host":"localhost","user":"unifor34_usrcatalogo"}
+[2025-04-26 08:12:37] INFO: incio de solicitud de login 
+[2025-04-26 08:12:37] DEBUG: intentando conexion a mysql {"host":"localhost","user":"unifor34_usrcatalogo"}
+[2025-04-26 08:12:40] INFO: incio de solicitud de login 
+[2025-04-26 08:12:40] DEBUG: intentando conexion a mysql {"host":"localhost","user":"unifor34_usrcatalogo"}
+[2025-04-26 08:12:59] INFO: incio de solicitud de login 
+[2025-04-26 08:12:59] DEBUG: intentando conexion a mysql {"host":"localhost","user":"root"}
+[2025-04-26 08:12:59] DEBUG: preparando consulta 
+[2025-04-26 08:12:59] : preparando consulta 
+[2025-04-26 08:23:16] INFO: incio de solicitud de login 
+[2025-04-26 08:23:16] DEBUG: intentando conexion a mysql {"host":"localhost","user":"root"}
+[2025-04-26 08:23:16] DEBUG: preparando consulta 
+[2025-04-26 08:23:16] : preparando consulta 
+[2025-04-26 08:24:07] INFO: incio de solicitud de login 
+[2025-04-26 08:24:07] DEBUG: intentando conexion a mysql {"host":"localhost","user":"root"}
+[2025-04-26 08:24:07] DEBUG: preparando consulta 
+[2025-04-26 08:24:07] : preparando consulta 
+[2025-04-26 08:25:17] INFO: incio de solicitud de login 
+[2025-04-26 08:25:17] DEBUG: intentando conexion a mysql {"host":"localhost","user":"root"}
+[2025-04-26 08:25:17] DEBUG: preparando consulta 
+[2025-04-26 08:25:17] : preparando consulta 
+[2025-04-26 08:25:46] INFO: incio de solicitud de login 
+[2025-04-26 08:25:46] DEBUG: intentando conexion a mysql {"host":"localhost","user":"root"}
+[2025-04-26 08:25:46] DEBUG: preparando consulta 
+[2025-04-26 08:25:57] INFO: incio de solicitud de login 
+[2025-04-26 08:25:57] DEBUG: intentando conexion a mysql {"host":"localhost","user":"root"}
+[2025-04-26 08:25:57] DEBUG: preparando consulta 
+[2025-04-26 08:25:57] : preparando consulta 
+[2025-04-26 08:26:20] INFO: incio de solicitud de login 
+[2025-04-26 08:26:20] DEBUG: intentando conexion a mysql {"host":"localhost","user":"root"}
+[2025-04-26 08:26:20] DEBUG: preparando consulta 
+[2025-04-26 08:26:20] $store_result: preparando consulta 
+[2025-04-26 08:28:25] DEBUG: intentando conexion a mysql {"host":"localhost","user":"root"}
+[2025-04-26 08:29:59] INFO: incio de solicitud de login 
+[2025-04-26 08:29:59] DEBUG: intentando conexion a mysql {"host":"localhost","user":"root"}
+[2025-04-26 08:29:59] DEBUG: preparando consulta 
+[2025-04-26 08:29:59] $store_result: preparando consulta 
+[2025-04-26 08:34:48] DEBUG: intentando conexion a mysql {"host":"localhost","user":"unifor34_usrcatalogo"}
+[2025-04-26 08:39:48] DEBUG: intentando conexion a mysql {"host":"localhost","user":"unifor34_usrcatalogo"}
+[2025-04-26 08:43:42] DEBUG: intentando conexion a mysql {"host":"localhost","user":"unifor34_usrcatalogo"}
+[2025-04-27 01:00:15] DEBUG: intentando conexion a mysql {"host":"localhost","user":"unifor34_usrcatalogo"}
+[2025-04-27 01:06:28] DEBUG: intentando conexion a mysql {"host":"localhost","user":"unifor34_usrcatalogo"}
+[2025-04-27 01:07:02] DEBUG: intentando conexion a mysql {"host":"localhost","user":"root"}
