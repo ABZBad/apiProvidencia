@@ -55,3 +55,34 @@
 [2025-04-27 01:00:15] DEBUG: intentando conexion a mysql {"host":"localhost","user":"unifor34_usrcatalogo"}
 [2025-04-27 01:06:28] DEBUG: intentando conexion a mysql {"host":"localhost","user":"unifor34_usrcatalogo"}
 [2025-04-27 01:07:02] DEBUG: intentando conexion a mysql {"host":"localhost","user":"root"}
+[2025-05-10 16:10:58] INFO: incio de solicitud de login 
+[2025-05-10 16:10:58] DEBUG: intentando conexion a mysql {"host":"localhost","user":"unifor34_usrcatalogo"}
+[2025-05-10 16:11:34] INFO: incio de solicitud de login 
+[2025-05-10 16:11:34] DEBUG: intentando conexion a mysql {"host":"localhost","user":"root"}
+[2025-05-10 16:11:34] DEBUG: preparando consulta 
+[2025-05-10 16:11:35] $store_result: preparando consulta 
+[2025-05-10 16:12:11] DEBUG: intentando conexion a mysql {"host":"localhost","user":"root"}
+[2025-05-10 16:50:49] INFO: incio de solicitud de login 
+[2025-05-10 16:50:49] DEBUG: intentando conexion a mysql {"host":"localhost","user":"root"}
+[2025-05-10 16:50:49] DEBUG: preparando consulta 
+[2025-05-10 16:50:49] $store_result: preparando consulta 
+[2025-05-10 16:53:07] DEBUG: intentando conexion a mysql {"host":"localhost","user":"root"}
+[2025-05-10 17:05:30] DEBUG: intentando conexion a mysql {"host":"localhost","user":"root"}
+[2025-05-10 17:05:30] DEBUG: preparando consulta 
+[2025-05-10 17:09:06] DEBUG: intentando conexion a mysql {"host":"localhost","user":"root"}
+[2025-05-10 17:09:06] DEBUG: preparando consulta 
+[2025-05-10 17:18:53] DEBUG: intentando conexion a mysql {"host":"localhost","user":"unifor34_usrcatalogo"}
+[2025-05-10 17:19:06] DEBUG: intentando conexion a mysql {"host":"localhost","user":"root"}
+[2025-05-10 17:19:06] DEBUG: preparando consulta 
+[2025-05-10 17:19:13] DEBUG: intentando conexion a mysql {"host":"localhost","user":"root"}
+[2025-05-10 17:19:13] DEBUG: preparando consulta 
+[2025-05-10 18:16:55] INFO: incio de solicitud de login 
+[2025-05-10 18:16:55] DEBUG: intentando conexion a mysql {"host":"localhost","user":"root"}
+[2025-05-10 18:16:55] DEBUG: preparando consulta 
+[2025-05-10 18:16:55] $store_result: preparando consulta 
+[2025-05-10 18:22:50] DEBUG: intentando conexion a mysql {"host":"localhost","user":"root"}
+[2025-05-10 18:22:50] DEBUG: preparando consulta 
+[2025-05-10 18:28:08] INFO: incio de solicitud de login 
+[2025-05-10 18:28:08] DEBUG: intentando conexion a mysql {"host":"localhost","user":"root"}
+[2025-05-10 18:28:08] DEBUG: preparando consulta 
+[2025-05-10 18:28:08] $store_result: preparando consulta 

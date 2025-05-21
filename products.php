@@ -190,7 +190,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action']) && $_GET['ac
 }
 
 // C. Validar JWT para endpoints protegidos
-$protectedActions = ['productos', 'tallas', 'colores', 'categorias'];
+$protectedActions = ['productos', 'tallas', 'colores', 'categorias','detalleproducto'];
 if (isset($_GET['action']) && in_array($_GET['action'], $protectedActions)) {
     try {
         $headers = getallheaders();
@@ -279,6 +279,50 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['action']) && $_GET['act
         sendResponse(false, null, $e->getMessage(), 500);
     }
 }
+
+// G. Endpoint para obtener categorías
+if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['action']) && $_GET['action'] === 'detalleproducto') {
+    try {
+        if (empty($_GET['sku'])) {
+            throw new Exception('SKU de producto requerido');
+        }
+        $sku = $_GET['sku'];
+
+        if (strlen($sku) != 8) {
+            throw new Exception('El SKU debe tener más de 5 y menos de 8 caracteres');
+        }
+        $conn = getDBConnection();
+
+        logAction("preparando consulta", "DEBUG");
+
+        $stmt = $conn->prepare("SELECT sku_producto, nombre_producto, descripcion_producto, foto_1_producto FROM tbl_productos WHERE sku_producto = ?");
+        $stmt->bind_param("s", $sku);
+        $stmt->execute();
+
+        $stmt->store_result(); // Obligatorio para usar num_rows
+        if ($stmt->num_rows !== 1) {
+            throw new Exception('Producto no encontrado');
+        }
+
+        // Vinculamos las columnas a variables
+        $stmt->bind_result($sku_producto, $nombre_producto, $descripcion_producto, $foto_1_producto);
+        $stmt->fetch();
+
+        $producto = [
+            'sku' => $sku_producto,
+            'nombre' => $nombre_producto,
+            'descripcion' => $descripcion_producto,
+            'foto' => $foto_1_producto
+        ];
+
+        sendResponse(true, $producto);
+
+    } catch (Exception $e) {
+        sendResponse(false, null, $e->getMessage(), 500);
+    }
+}
+
+
 
 // H. Endpoint no encontrado
 sendResponse(false, null, 'Endpoint no encontrado', 404);
