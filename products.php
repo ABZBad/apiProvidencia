@@ -190,7 +190,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_GET['action']) && $_GET['ac
 }
 
 // C. Validar JWT para endpoints protegidos
-$protectedActions = ['productos', 'tallas', 'colores', 'categorias','detalleproducto'];
+// $protectedActions = ['productos', 'tallas', 'colores', 'categorias','detalleproducto'];
+$protectedActions = ['colores'];
 if (isset($_GET['action']) && in_array($_GET['action'], $protectedActions)) {
     try {
         $headers = getallheaders();

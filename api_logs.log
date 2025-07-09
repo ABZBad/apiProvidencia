@@ -86,3 +86,32 @@
 [2025-05-10 18:28:08] DEBUG: intentando conexion a mysql {"host":"localhost","user":"root"}
 [2025-05-10 18:28:08] DEBUG: preparando consulta 
 [2025-05-10 18:28:08] $store_result: preparando consulta 
+[2025-05-22 02:32:07] INFO: incio de solicitud de login 
+[2025-05-22 02:32:07] DEBUG: intentando conexion a mysql {"host":"localhost","user":"root"}
+[2025-05-22 02:32:08] DEBUG: preparando consulta 
+[2025-05-22 02:32:08] $store_result: preparando consulta 
+[2025-05-22 02:32:54] INFO: incio de solicitud de login 
+[2025-05-22 02:32:54] DEBUG: intentando conexion a mysql {"host":"localhost","user":"root"}
+[2025-05-22 02:32:54] DEBUG: preparando consulta 
+[2025-05-22 02:32:54] $store_result: preparando consulta 
+[2025-05-22 02:34:17] INFO: incio de solicitud de login 
+[2025-05-22 02:34:17] DEBUG: intentando conexion a mysql {"host":"localhost","user":"root"}
+[2025-05-22 02:34:17] DEBUG: preparando consulta 
+[2025-05-22 02:34:17] $store_result: preparando consulta 
+[2025-05-22 02:34:34] DEBUG: intentando conexion a mysql {"host":"localhost","user":"root"}
+[2025-05-22 02:34:34] DEBUG: preparando consulta 
+[2025-05-23 00:13:50] INFO: incio de solicitud de login 
+[2025-05-23 00:13:50] DEBUG: intentando conexion a mysql {"host":"localhost","user":"root"}
+[2025-05-23 00:13:50] DEBUG: preparando consulta 
+[2025-05-23 00:13:50] $store_result: preparando consulta 
+[2025-05-23 00:14:19] DEBUG: intentando conexion a mysql {"host":"localhost","user":"root"}
+[2025-05-23 00:14:32] DEBUG: intentando conexion a mysql {"host":"localhost","user":"root"}
+[2025-05-23 00:14:32] DEBUG: preparando consulta 
+[2025-06-04 10:56:10] DEBUG: intentando conexion a mysql {"host":"localhost","user":"root"}
+[2025-06-04 10:56:10] DEBUG: preparando consulta 
+[2025-06-04 10:56:40] DEBUG: intentando conexion a mysql {"host":"localhost","user":"root"}
+[2025-06-04 10:56:40] DEBUG: preparando consulta 
+[2025-06-04 11:02:12] DEBUG: intentando conexion a mysql {"host":"localhost","user":"root"}
+[2025-06-04 11:13:44] DEBUG: intentando conexion a mysql {"host":"localhost","user":"root"}
+[2025-06-04 11:13:52] DEBUG: intentando conexion a mysql {"host":"localhost","user":"root"}
+[2025-06-04 11:13:52] DEBUG: preparando consulta 
